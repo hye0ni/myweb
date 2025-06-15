@@ -15,6 +15,13 @@
       color: inherit;
       text-decoration: none;
     }
+    /* 링크 하이라이트 스타일 */
+    .highlight-link {
+      color: #ffd600;
+      text-decoration: underline;
+      font-weight: 500;
+      word-break: break-all;
+    }
     header {
       background: #fff;
       box-shadow: 0 2px 10px rgba(0,0,0,0.03);
@@ -54,7 +61,6 @@
     nav li:hover {
       color: #f6b94c;
     }
-    /* Hero Section */
     .hero {
       background: linear-gradient(120deg,#fffbe6 0%,#f7f8fa 100%);
       padding: 80px 0 64px 0;
@@ -89,7 +95,6 @@
     .hero-btn:hover {
       background: #ffd43b;
     }
-    /* About Section */
     section#about {
       padding: 56px 0 48px 0;
       background: #f7f8fa;
@@ -186,7 +191,6 @@
     .about-card.cert, .about-card.career {
       min-height: 130px;
     }
-    /* Portfolio Section */
     section#portfolio {
       padding: 56px 0 48px 0;
       background: #fff;
@@ -228,8 +232,8 @@
     }
     .portfolio-item img {
       width: 100%;
-      max-width: 300px;   /* 기존 260px → 300px */
-      height: 210px;      /* 기존 180px → 210px */
+      max-width: 300px;
+      height: 210px;
       object-fit: cover;
       border-radius: 8px;
       margin-bottom: 16px;
@@ -248,7 +252,6 @@
       text-align: center;
       line-height: 1.5;
     }
-    /* Modal Styles */
     .modal-overlay {
       display: none;
       position: fixed;
@@ -312,7 +315,6 @@
       from { transform: translateY(40px) scale(0.98);}
       to { transform: translateY(0) scale(1);}
     }
-    /* Contact Section */
     section#contact {
       padding: 56px 0 48px 0;
       background: #fffbe6;
@@ -347,7 +349,6 @@
     .contact-info a:hover {
       background: #ffe066;
     }
-    /* Footer */
     footer {
       text-align: center;
       color: #aaa;
@@ -357,7 +358,6 @@
       margin-top: 0;
       border-top: 1px solid #f0f0f0;
     }
-    /* 반응형 */
     @media (max-width: 900px) {
       .nav-container {
         flex-direction: column;
@@ -422,7 +422,6 @@
       }, 10);
     };
   </script>
-  <!-- 헤더/네비게이션 -->
   <header>
     <div class="nav-container">
       <div class="logo">최서현의 포트폴리오</div>
@@ -435,7 +434,6 @@
       </nav>
     </div>
   </header>
-  <!-- Hero Section -->
   <section class="hero">
     <div class="container">
       <h1 class="hero-title">안녕하세요, 최서현입니다!</h1>
@@ -446,7 +444,6 @@
       <a href="#portfolio" class="hero-btn">포트폴리오 보기</a>
     </div>
   </section>
-  <!-- About Me Section -->
   <section id="about">
     <div class="container">
       <div class="about-header">
@@ -457,11 +454,9 @@
         </p>
       </div>
       <div class="about-row">
-        <!-- 왼쪽 사진 (로컬 파일 사용 예시) -->
         <div class="about-photo">
           <img src="images/profile.jpg" alt="프로필 사진">
         </div>
-        <!-- 오른쪽 카드들 -->
         <div class="about-cards">
           <div class="about-card">
             <h5>이름</h5>
@@ -494,7 +489,6 @@
       </div>
     </div>
   </section>
-  <!-- Portfolio Section -->
   <section id="portfolio">
     <div class="container">
       <div class="portfolio-header">
@@ -518,7 +512,6 @@
         </div>
       </div>
     </div>
-    <!-- Modal -->
     <div class="modal-overlay" id="portfolioModal">
       <div class="modal-content">
         <button class="modal-close" id="modalCloseBtn" aria-label="닫기">&times;</button>
@@ -527,7 +520,6 @@
       </div>
     </div>
   </section>
-  <!-- Contact Section -->
   <section id="contact">
     <div class="container">
       <div class="contact-header">
@@ -540,20 +532,19 @@
       </div>
     </div>
   </section>
-  <!-- Footer -->
   <footer>
     &copy; 2025 최서현. All rights reserved.
   </footer>
   <script>
-    // 프로젝트별 상세 설명 데이터
+    // 프로젝트별 상세 설명 데이터 (링크만 노란색+밑줄)
     const projectDetails = {
       A: {
         title: "라디오 진행 및 영상 편집",
-        desc: "주제를 정하여 6주 동안 라디오를 진행하고, 그 모습을 촬영한 후 편집을 거쳐 팟빵과 유튜브에 업로드<br><br>[기간] 2025. 03. 12 - 2025. 04. 22<br>[역량] 주제에 맞는 영상 편집 능력, 소비자와의 소통 능력, 스토리텔링 스킬<br>[성과] 팟빵 조회 수 총 200회<br>[인사이트] 기술보다 중요한 건 맥락에 맞는 사용<br>[사용 툴] Photoshop, Illustrator, Premiere Pro, After Effects"
+        desc: "주제를 정하여 6주 동안 라디오를 진행하고, 그 모습을 촬영한 후 편집을 거쳐 팟빵과 유튜브에 업로드<br><br>[기간] 2025. 03. 12 - 2025. 04. 22<br>[역량] 주제에 맞는 영상 편집 능력, 소비자와의 소통 능력, 스토리텔링 스킬<br>[성과] 팟빵 조회 수 총 200회<br>[인사이트] 기술보다 중요한 건 맥락에 맞는 사용<br>[사용 툴] Photoshop, Illustrator, Premiere Pro, After Effects<br>링크: <a href='https://www.youtube.com/watch?v=LZL0IDUCX7Q' target='_blank' rel='noopener' class='highlight-link'>https://www.youtube.com/watch?v=LZL0IDUCX7Q</a>"
       },
       B: {
         title: "부산 소방 재난 본부 협업",
-        desc: "부산 소방 재난 본부 2025년도 상시 소방훈련 우수대원 선발대회 일부 촬영 및 영상 편집 <br><br>[기간] 2025. 03. 07 - 2025. 03. 16<br>[역량] 주제에 맞는 영상 편집 능력, 커뮤니케이션 스킬<br>[성과] 부산 119 유튜브 업로드 조회 수 597회<br>[인사이트] 공공 콘텐츠에서 요구되는 정확성과 신뢰감의 중요성 인식<br>[사용 툴] Photoshop, Illustrator, Premiere Pro, After Effects"
+        desc: "부산 소방 재난 본부 2025년도 상시 소방훈련 우수대원 선발대회 일부 촬영 및 영상 편집 <br><br>[기간] 2025. 03. 07 - 2025. 03. 16<br>[역량] 주제에 맞는 영상 편집 능력, 커뮤니케이션 스킬<br>[성과] 부산 119 유튜브 업로드 조회 수 597회<br>[인사이트] 공공 콘텐츠에서 요구되는 정확성과 신뢰감의 중요성 인식<br>[사용 툴] Photoshop, Illustrator, Premiere Pro, After Effects<br>링크: <a href='https://www.youtube.com/watch?v=ag4oKwIMOPc' target='_blank' rel='noopener' class='highlight-link'>https://www.youtube.com/watch?v=ag4oKwIMOPc</a>"
       },
       C: {
         title: "영화 포스터 분석 및 재해석",
